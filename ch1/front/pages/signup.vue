@@ -12,11 +12,11 @@ export default {
          name: 'Nuxt.js'
       };
    },
-   // head() {
-   //    return {
-   //       title: '회원가입'
-   //    }
-   // }
+   head() {
+      return {
+         title: '회원가입'
+      }
+   }
 }
 </script>
 <style>

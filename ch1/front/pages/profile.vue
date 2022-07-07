@@ -15,7 +15,7 @@ export default {
    },
    head() {
       return {
-         title: '프로필'
+         title: '프로필22'
       }
    }
 }

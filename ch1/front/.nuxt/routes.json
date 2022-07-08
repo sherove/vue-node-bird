@@ -14,6 +14,13 @@
     "_name": "_50db5e36"
   },
   {
+    "name": "study",
+    "path": "/study",
+    "component": "C:\\\\Users\\\\user\\\\Documents\\\\again2021\\\\vue-node-bird\\\\ch1\\\\front\\\\pages\\\\study.vue",
+    "chunkName": "pages/study",
+    "_name": "_06f0c00c"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\user\\\\Documents\\\\again2021\\\\vue-node-bird\\\\ch1\\\\front\\\\pages\\\\index.vue",

@@ -14,19 +14,31 @@
                <v-btn text nuxt to="/signup" :style="{ display: 'flex', alignItems: 'center'}">
                   <div>회원가입</div>
                </v-btn>
+               <v-btn text nuxt to="/study" :style="{ display: 'flex', alignItems: 'center'}">
+                  <div>스터디</div>
+               </v-btn>
             </v-toolbar-items>
          </v-toolbar>
       </nav>
-      <v-row>
-         <v-col cols="12" md="4">왼쪽</v-col>
-         <v-col cols="12" md="8">오른쪽</v-col>
+      <v-row no-gutters>
+         <v-col cols="12" md="4">
+            <login-form />
+         </v-col>
+         <v-col cols="12" md="8">
+            <nuxt />
+         </v-col>
       </v-row>
    </v-app>
 </template>
 <script>
+import LoginForm from '~/components/LoginForm';
+// 물결표시는? root 폴더위치 (소스들의 디렉토리 여기선 front폴더)
+
 export default {
    name: '',
-   components: {},
+   components: {
+      LoginForm
+   },
    data() {
       return {
          name: 'Nuxt.js'

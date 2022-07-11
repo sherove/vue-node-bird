@@ -3,7 +3,14 @@
       <v-card>
          <v-container>
             <v-subheader>회원가입</v-subheader>
-            <v-form v-model="valid" ubmit.prevent="onSubmitForm">
+            <!-- 
+                  vuetify 에서 제공한 기능 : validate 체크 
+                  1. <v-form v-model = "vaild"></v-form>
+                  2. 모든 text-field가 입력되어야지만 vaild: true로 변경 (기존값 false)
+
+                  각 text-field마다 각각 validate 체크해야된다면? :rules = "..." 를 이용하자
+            -->
+            <v-form ref="form" v-model="valid" @submit.prevent="onSubmitForm">
                <v-text-field
                   v-model="email"
                   label="이메일"
@@ -48,6 +55,15 @@
 export default {
    name: '',
    components: {},
+   methods: {
+      onSubmitForm() {
+         if (this.$refs.form.validate()) {
+            alert('회원가입 ㄱ');
+         } else {
+            alert('가입불가');
+         }
+      }
+   },
    data() {
       return {
          valid: false,
@@ -57,6 +73,8 @@ export default {
          nickname: '',
          terms: false,
          emailRules: [
+            // value
+            // v => 조건 || '에러메세지'
             v => !!v || '이메일은 필수입니다',
             v => /.+@.+/.test(v) || '이메일이 유효하지않습니다.'
          ],
@@ -68,7 +86,7 @@ export default {
          ],
          passwordCheckRules: [
             v => !!v || '비밀번호체크는 필수입니다.',
-            v => !!v === this.password || '비밀번호 일치하지않습니다.'
+            v => v === this.password || '비밀번호 일치하지않습니다.'
          ]     
       };
    },

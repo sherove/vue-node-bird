@@ -5,7 +5,7 @@
 import CustomInput from '~/components/CustomInput';
 
 export default {
-   name: '',
+   name: 'StudyForm',
    components: {
       CustomInput
    },

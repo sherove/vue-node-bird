@@ -53,17 +53,8 @@
 </template>
 <script>
 export default {
-   name: '',
+   name: 'SignupForm',
    components: {},
-   methods: {
-      onSubmitForm() {
-         if (this.$refs.form.validate()) {
-            alert('회원가입 ㄱ');
-         } else {
-            alert('가입불가');
-         }
-      }
-   },
    data() {
       return {
          valid: false,
@@ -94,7 +85,16 @@ export default {
       return {
          title: '회원가입'
       }
-   }
+   },
+   methods: {
+      onSubmitForm() {
+         if (this.$refs.form.validate()) {
+            alert('회원가입 ㄱ');
+         } else {
+            alert('가입불가');
+         }
+      }
+   },
 }
 </script>
 <style>

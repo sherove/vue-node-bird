@@ -34,7 +34,7 @@
 import FollowList from '~/components/FollwList'
 export default {
    // layout: 'admin',
-   name: '',
+   name: 'ProfileForm',
    components: {
       FollowList
    },

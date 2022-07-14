@@ -1,38 +1,35 @@
 <template>
-   <input type="text" @input="inputHobby()" v-model="hobby" placeholder="취미" />
+    <input v-model="hobby" type="text" placeholder="취미" @input="inputHobby()"/>
 </template>
 <script>
 
 export default {
-   name: '',
-   components: {
-   },
-   props: {
+  name: 'CustomInput',
+  components: {},
+  props: {
       parentHobby: {
-         type: String
+          type: String,
+          default: ''
       }
-   },
-   computed: {
-      _parentHobby () {
-         return this.parentHobby
+  },
+  data() {
+      return {hobby: ''};
+  },
+  computed: {
+      _parentHobby() {
+          return this.parentHobby
       }
-   },
-   watch: {
-      _parentHobby (value) {
-         this.hobby = value
+  },
+  watch: {
+      _parentHobby(value) {
+          this.hobby = value
       }
-   },
-   data() {
-      return {
-         hobby: ''
-      };
-   },
-   methods: {
-      inputHobby () {
-         this.$emit('input', this.hobby)
+  },
+  methods: {
+      inputHobby() {
+          this.$emit('input', this.hobby)
       }
-   },
+  }
 }
 </script>
-<style>
-</style>
+<style></style>

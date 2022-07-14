@@ -35,7 +35,7 @@ import LoginForm from '~/components/LoginForm';
 // 물결표시는? root 폴더위치 (소스들의 디렉토리 여기선 front폴더)
 
 export default {
-   name: '',
+   name: 'DefaultForm',
    components: {
       LoginForm
    },

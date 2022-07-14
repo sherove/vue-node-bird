@@ -11,7 +11,7 @@
 import PostCard from '~/components/PostCard';
 
 export default {
-   name: '',
+   name: 'IndexForm',
    components: {
       PostCard
    },

@@ -20,6 +20,8 @@
             </v-toolbar-items>
          </v-toolbar>
       </nav>
+      <div>{{ name }}</div>
+      <v-btn @click="onChangeName()">바이바이</v-btn>
       <v-row no-gutters>
          <v-col cols="12" md="4">
             <login-form />
@@ -39,11 +41,18 @@ export default {
    components: {
       LoginForm
    },
-   data() {
-      return {
-         name: 'Nuxt.js'
-      };
+   computed: {
+      name () {
+         return this.$store.state.posts.name
+         // posts.js에 있는 name 가지고 오고싶다면? this.$store.state.posts.name
+         // index.js에 있는 name 가지고 오고싶다면? this.$store.state.name
+      }
    },
+   methods: {
+      onChangeName () {
+         this.$store.commit('posts/bye')
+      }
+   }
    // head() {
    //    return {
    //       title: '노드버드'
